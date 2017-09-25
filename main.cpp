@@ -112,7 +112,12 @@ int addNode(DATATYPE data, BT *tree)
         } else{
           int balance =  addNode(data,tree->left);
             tree->balance+=balance;
-            return balance;
+            if (balance!=0)
+            {
+                tree->balance += 1;
+                return 1;
+            }
+            return 0;
         }
     }
     else if(tree->left==nullptr){
@@ -131,21 +136,32 @@ int addNode(DATATYPE data, BT *tree)
         {
            int balance = addNode(data,tree->right);
             tree->balance += balance;
-            return balance;
+            if (balance!=0)
+            {
+                tree->balance += -1;
+                return 0;
+            }
         }
     } else{
         if(tree->key>data)
         {
            int balance = addNode(data,tree->left);
             if (balance!=0)
+            {
                 tree->balance += 1;
-            return balance;
+                return 1;
+            }
+
+            return 0;
         } else
         {
           int balance =  addNode(data,tree->right);
             if (balance!=0)
+            {
                 tree->balance += -1;
-            return balance;
+                return -1;
+            }
+            return 0;
         }
     }
 
