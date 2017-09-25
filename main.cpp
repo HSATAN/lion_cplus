@@ -71,7 +71,6 @@ int addNode(DATATYPE data, BT *tree)
     if (tree->key==-1)
     {
         int balance = addNode(data,tree->left);
-        tree->left->balance += balance;
         return balance;
     }
      else if(tree->right== nullptr && tree->left==nullptr)
