@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Pratice.dir/main.cpp.o CMakeFiles/Pratice.dir/thread.cpp.o CMakeFiles/Pratice.dir/tree.cpp.o  -o Pratice 
