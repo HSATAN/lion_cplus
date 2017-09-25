@@ -5,10 +5,10 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <fstream>
-
+#include <sstream>
 using namespace std;
 
-typedef string DATATYPE;
+typedef int DATATYPE;
 void signalHandler(int);
 pthread_mutex_t mutex1;
 int money;
@@ -20,18 +20,9 @@ typedef struct BTree
 {
     struct BTree * left;
     struct BTree * right;
-    string key;
+    DATATYPE key;
+    int balance;
 } BT;
-
-
-void initTree(BT * tree)
-{
-    if (tree==NULL)
-    {
-        ;
-    }
-
-}
 
 BT * createTree(DATATYPE data, BT *tree)
 {
@@ -43,27 +34,65 @@ BT * createTree(DATATYPE data, BT *tree)
     node->key=data;
     node->left= nullptr;
     node->right= nullptr;
+    node->balance=0;
     tree=node;
     return tree;
 }
-void addNode(DATATYPE data, BT *tree)
+BT * init(BT *tree,DATATYPE data)
+{
+    BT *node = new BT;
+
+
+    //node = (BT*)malloc(sizeof(struct BTree));
+
+    node->key=-1;
+    node->left= nullptr;
+    node->right= nullptr;
+    node->balance=0;
+    tree=node;
+    return tree;
+}
+int addNode(DATATYPE data, BT *tree)
 {
     if (!tree)
-        return;
-    if(tree->right== nullptr && tree->left==nullptr)
+    {return 0;}
+
+    if (tree->key==-1 && tree->left== nullptr)
     {
         BT * node;
         node = new BT;
         node->key=data;
         node->right=nullptr;
         node->left=nullptr;
+        node->balance=0;
+        tree->left=node;
+        return 0;
+    }
+    if (tree->key==-1)
+    {
+        int balance = addNode(data,tree->left);
+        tree->left->balance += balance;
+        return balance;
+    }
+     else if(tree->right== nullptr && tree->left==nullptr)
+    {
+        BT * node;
+        node = new BT;
+        node->key=data;
+        node->right=nullptr;
+        node->left=nullptr;
+        node->balance=0;
         if(tree->key>data)
         {
 
 
             tree->left=node;
+            tree->balance += 1;
+            return 1;
         } else{
             tree->right=node;
+            tree->balance -= 1;
+            return -1;
         }
 
     }
@@ -76,9 +105,14 @@ void addNode(DATATYPE data, BT *tree)
             node->key=data;
             node->right= nullptr;
             node->left= nullptr;
+            node->balance=0;
             tree->right=node;
+            tree->balance -= 1;
+            return 0;
         } else{
-            addNode(data,tree->left);
+          int balance =  addNode(data,tree->left);
+            tree->balance+=balance;
+            return balance;
         }
     }
     else if(tree->left==nullptr){
@@ -89,18 +123,27 @@ void addNode(DATATYPE data, BT *tree)
             node->key=data;
             node->right=nullptr;
             node->left=nullptr;
+            node->balance=0;
             tree->left=node;
+            tree->balance += 1;
+
         } else
         {
-            addNode(data,tree->right);
+           int balance = addNode(data,tree->right);
+            tree->balance += balance;
+            return balance;
         }
     } else{
         if(tree->key>data)
         {
-            addNode(data,tree->left);
+           int balance = addNode(data,tree->left);
+            tree->balance += balance;
+            return balance;
         } else
         {
-            addNode(data,tree->right);
+          int balance =  addNode(data,tree->right);
+            tree->balance += balance;
+            return balance;
         }
     }
 
@@ -148,7 +191,8 @@ void create_tree_from_file(BT * tree)
         while(!name.empty())
         {
 
-            addNode(name.back(),tree);
+           int balance =  addNode(stoi(name.back()),tree);
+            tree->balance += balance;
             name.pop_back();
         }
     }
@@ -210,13 +254,10 @@ int get_depth(BT* tree)
     return left>right ? left:right;
 }
 int main() {
-    //create_tree_from_file();
-    BT *tree= nullptr;
-    tree = createTree("999",tree);
-    addNode("111",tree);
+    BT *tree;
+    tree = init(tree,-1);
     create_tree_from_file(tree);
-    cout<<get_depth(tree)<<endl;
-    print_tree(tree);
-    int i=1.01;
+    cout<<get_depth(tree->left)<<endl;
+    print_tree(tree->left);
     return 0;
 }
