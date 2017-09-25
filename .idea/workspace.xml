@@ -27,12 +27,13 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="204" column="36" lean-forward="true" selection-start-line="204" selection-start-column="36" selection-end-line="204" selection-end-column="36" />
+            <state relative-caret-position="137">
+              <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#4561#4775#0" expanded="false" />
-                <element signature="e#4776#4853#0" expanded="false" />
+                <element signature="e#3159#3774#0" expanded="false" />
+                <element signature="e#4614#4828#0" expanded="false" />
+                <element signature="e#4829#4906#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -128,8 +129,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="251" />
-    <option name="y" value="84" />
+    <option name="x" value="355" />
+    <option name="y" value="73" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -204,15 +205,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506049828900</updated>
-      <workItem from="1506049830671" duration="54071000" />
+      <workItem from="1506049830671" duration="55214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54071000" />
+    <option name="totallyTimeSpent" value="55214000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="251" y="84" width="1400" height="1000" extended-state="0" />
+    <frame x="355" y="73" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -247,7 +248,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>259</line>
+          <line>261</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -383,12 +384,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="204" column="36" lean-forward="true" selection-start-line="204" selection-start-column="36" selection-end-line="204" selection-end-column="36" />
+        <state relative-caret-position="137">
+          <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#4561#4775#0" expanded="false" />
-            <element signature="e#4776#4853#0" expanded="false" />
+            <element signature="e#3159#3774#0" expanded="false" />
+            <element signature="e#4614#4828#0" expanded="false" />
+            <element signature="e#4829#4906#0" expanded="false" />
           </folding>
         </state>
       </provider>

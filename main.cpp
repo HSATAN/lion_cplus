@@ -137,12 +137,14 @@ int addNode(DATATYPE data, BT *tree)
         if(tree->key>data)
         {
            int balance = addNode(data,tree->left);
-            tree->balance += balance;
+            if (balance!=0)
+                tree->balance += 1;
             return balance;
         } else
         {
           int balance =  addNode(data,tree->right);
-            tree->balance += balance;
+            if (balance!=0)
+                tree->balance += -1;
             return balance;
         }
     }
