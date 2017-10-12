@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp
+biaodashi_tree.h
+/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.h
+iostream
+-
+iomanip
+-
+vector
+-
+tree.h
+/Users/huangkaijie/CLionProjects/Pratice/tree.h
+
+/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.h
+tree.h
+/Users/huangkaijie/CLionProjects/Pratice/tree.h
+iostream
+-
+
 /Users/huangkaijie/CLionProjects/Pratice/main.cpp
 iostream
 -
@@ -13,18 +31,18 @@ fstream
 -
 vector
 -
-csignal
+stdlib.h
 -
-pthread.h
--
-unistd.h
--
-fstream
--
-sstream
+tree.h
+/Users/huangkaijie/CLionProjects/Pratice/tree.h
+biaodashi_tree.h
+/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.h
+iomanip
 -
 
 /Users/huangkaijie/CLionProjects/Pratice/thread.cpp
 
 /Users/huangkaijie/CLionProjects/Pratice/tree.cpp
+
+/Users/huangkaijie/CLionProjects/Pratice/tree.h
 

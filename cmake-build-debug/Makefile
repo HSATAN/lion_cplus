@@ -123,6 +123,33 @@ Pratice/fast:
 	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/build
 .PHONY : Pratice/fast
 
+biaodashi_tree.o: biaodashi_tree.cpp.o
+
+.PHONY : biaodashi_tree.o
+
+# target to build an object file
+biaodashi_tree.cpp.o:
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o
+.PHONY : biaodashi_tree.cpp.o
+
+biaodashi_tree.i: biaodashi_tree.cpp.i
+
+.PHONY : biaodashi_tree.i
+
+# target to preprocess a source file
+biaodashi_tree.cpp.i:
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.i
+.PHONY : biaodashi_tree.cpp.i
+
+biaodashi_tree.s: biaodashi_tree.cpp.s
+
+.PHONY : biaodashi_tree.s
+
+# target to generate assembly for a file
+biaodashi_tree.cpp.s:
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.s
+.PHONY : biaodashi_tree.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Pratice"
+	@echo "... biaodashi_tree.o"
+	@echo "... biaodashi_tree.i"
+	@echo "... biaodashi_tree.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

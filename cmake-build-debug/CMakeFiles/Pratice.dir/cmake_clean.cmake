@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Pratice.dir/main.cpp.o"
   "CMakeFiles/Pratice.dir/thread.cpp.o"
   "CMakeFiles/Pratice.dir/tree.cpp.o"
+  "CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o"
   "Pratice.pdb"
   "Pratice"
 )

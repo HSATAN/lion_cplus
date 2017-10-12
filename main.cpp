@@ -1,14 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <csignal>
-#include <pthread.h>
-#include <unistd.h>
-#include <fstream>
-#include <sstream>
+#include <stdlib.h>
+#include "tree.h"
+#include "biaodashi_tree.h"
+#include <iomanip>
 using namespace std;
 
-typedef int DATATYPE;
 void signalHandler(int);
 pthread_mutex_t mutex1;
 int money;
@@ -16,13 +14,6 @@ struct thread_data{
     int thread_id;
     char * message;
 };
-typedef struct BTree
-{
-    struct BTree * left;
-    struct BTree * right;
-    DATATYPE key;
-    int balance;
-} BT;
 
 BT * createTree(DATATYPE data, BT *tree)
 {
@@ -49,6 +40,7 @@ BT * init(BT *tree,DATATYPE data)
     node->left= nullptr;
     node->right= nullptr;
     node->balance=0;
+    node->depth=1;
     tree=node;
     return tree;
 }
@@ -65,6 +57,7 @@ int addNode(DATATYPE data, BT *tree)
         node->right=nullptr;
         node->left=nullptr;
         node->balance=0;
+        node->depth=1;
         tree->left=node;
         return 0;
     }
@@ -81,12 +74,15 @@ int addNode(DATATYPE data, BT *tree)
         node->right=nullptr;
         node->left=nullptr;
         node->balance=0;
+        node->depth=1;
+        tree->depth =2;
         if(tree->key>data)
         {
 
 
             tree->left=node;
             tree->balance += 1;
+
             return 1;
         } else{
             tree->right=node;
@@ -105,15 +101,16 @@ int addNode(DATATYPE data, BT *tree)
             node->right= nullptr;
             node->left= nullptr;
             node->balance=0;
+            node->depth=1;
             tree->right=node;
             tree->balance -= 1;
             return 0;
         } else{
           int balance =  addNode(data,tree->left);
-            tree->balance+=balance;
             if (balance!=0)
             {
                 tree->balance += 1;
+                tree->depth += 1;
                 return 1;
             }
             return 0;
@@ -128,16 +125,18 @@ int addNode(DATATYPE data, BT *tree)
             node->right=nullptr;
             node->left=nullptr;
             node->balance=0;
+            node->depth=1;
             tree->left=node;
             tree->balance += 1;
+
 
         } else
         {
            int balance = addNode(data,tree->right);
-            tree->balance += balance;
             if (balance!=0)
             {
                 tree->balance += -1;
+                tree->depth=1;
                 return 0;
             }
         }
@@ -148,6 +147,7 @@ int addNode(DATATYPE data, BT *tree)
             if (balance!=0)
             {
                 tree->balance += 1;
+                tree->depth += 1;
                 return 1;
             }
 
@@ -158,6 +158,7 @@ int addNode(DATATYPE data, BT *tree)
             if (balance!=0)
             {
                 tree->balance += -1;
+                tree->depth += 1;
                 return -1;
             }
             return 0;
@@ -216,41 +217,45 @@ void create_tree_from_file(BT * tree)
     in.close();
 }
 
-void * test_thread(void* args)
-{
-    struct thread_data *data;
-    data = (struct thread_data *)args;
-    cout<<"线程id = "<<data->thread_id<<endl;
-    cout<<"消息  ："<<data->message<<endl;
-    while (money>0)
-
-    {
-        pthread_mutex_lock(&mutex1);
-        printf("子进程进入临界区查看money\n");
-        if (money==0)
-        {
-            money+=200;
-            printf("子线程money=%d\n",money);
-        }
-
-        pthread_mutex_unlock(&mutex1);
-        sleep(1);
-    }
-
-}
 void print_tree(BT * tree)
 {
     if(tree)
     {
+        printf("%c\n",tree->key);
+        if(tree->left)
+        {
+            print_tree(tree->left);
+        }
+        if(tree->right)
+        {
+            print_tree(tree->right);
+        }
+    }
+
+}
+void print_tree_middl(BT *tree)
+{
+    if(tree)
+    {
+        print_tree_middl(tree->left);
         cout<<tree->key<<endl;
+        print_tree_middl(tree->right);
     }
-    if(tree->left)
+
+}
+void print_tree_first_format(BT *tree,int w=0)
+{
+    if(tree)
     {
-        print_tree(tree->left);
-    }
-    if(tree->right)
-    {
-        print_tree(tree->right);
+        cout<<setw(w)<<tree->key<<endl;
+        if(tree->left)
+        {
+            print_tree_first_format(tree->left,w+2);
+        }
+        if(tree->right)
+        {
+            print_tree_first_format(tree->right,w+2);
+        }
     }
 }
 BT * get_insert(BT * tree)
@@ -272,9 +277,19 @@ int get_depth(BT* tree)
 }
 int main() {
     BT *tree;
-    tree = init(tree,-1);
-    create_tree_from_file(tree);
-    cout<<get_depth(tree->left)<<endl;
-    print_tree(tree->left);
+//    tree = init(tree,-1);
+//    create_tree_from_file(tree);
+//    printf("%d\n",get_depth(tree->left));
+//    print_tree(tree->left);
+//    string a;
+//    cout<<typeid(a).name()<<endl;
+//    auto i="huangkaijie";
+//    cout<<i<<endl;
+//    cout<<typeid(i).name()<<endl;
+    string biaodashi="ab+cde+**";
+    BT * BDS=scanBiaoDaShi(biaodashi);
+    cout<<get_depth(BDS)<<endl;
+    //print_tree_middl(BDS);
+    print_tree_first_format(BDS);
     return 0;
 }

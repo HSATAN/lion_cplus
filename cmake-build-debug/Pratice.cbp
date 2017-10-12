@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp">
+			<Option target="Pratice"/>
+		</Unit>
+		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.h">
+			<Option target="Pratice"/>
+		</Unit>
 		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/main.cpp">
 			<Option target="Pratice"/>
 		</Unit>
@@ -89,6 +95,9 @@
 			<Option target="Pratice"/>
 		</Unit>
 		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/tree.cpp">
+			<Option target="Pratice"/>
+		</Unit>
+		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/tree.h">
 			<Option target="Pratice"/>
 		</Unit>
 		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/CMakeLists.txt">
