@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <vector>
 #include "tree.h"
+#include <cmath>
 using namespace std;
 
 BT * scanBiaoDaShi(string biaodashi)
@@ -108,10 +109,13 @@ int get_depth(BT* tree)
 void BinarySearchTree::insert(BT *root,DATATYPE key) {
     if(root==NULL)
     {
+
         this->root=new BT;
         this->root->key=key;
         this->root->left=NULL;
         this->root->right=NULL;
+        this->root->balance=0;
+        root=this->root;
     }
     else if(key<root->key)//插入左子树
     {
@@ -121,11 +125,15 @@ void BinarySearchTree::insert(BT *root,DATATYPE key) {
             node->key = key;
             node->left=NULL;
             node->right=NULL;
+            node->balance=0;
             root->left=node;
+            root->balance += 1;
         }
         else
         {
             this->insert(root->left,key);
+            //root->balance = get_depth(root->left) - get_depth(root->right);
+
         }
 
     }
@@ -137,17 +145,48 @@ void BinarySearchTree::insert(BT *root,DATATYPE key) {
             node->key = key;
             node->left=NULL;
             node->right=NULL;
+            node->balance=0;
             root->right=node;
+            root->balance -= 1;
         }
         else
         {
             this->insert(root->right,key);
         }
     }
+    root->balance = get_depth(root->left) - get_depth(root->right);
 
+    if(abs(root->balance)==2)
+    {
+        cout<<"----"<<root->key<<"-----"<<endl;
+        cout<<checkAdjustType(root,1)<<endl;
+        cout<<checkAdjustType(root,2)<<endl;
+    }
+}
+
+int get_depth_lr(BT *tree, int i)
+{
+    if(!tree)
+    {
+        return 0;
+    }
+    if(i==1)
+    {
+        int left=get_depth_lr(tree->left,i)+1;
+        return left;
+    }
+    else
+    {
+        int left=get_depth_lr(tree->right,i)+1;
+        return left;
+    }
 
 }
 
+int checkAdjustType(BT *tree, int i)
+{
+    return get_depth_lr(tree,i);
+}
 bool BinarySearchTree::isEmpty() const {
     if(this->root==NULL)
         return true;
@@ -155,3 +194,4 @@ bool BinarySearchTree::isEmpty() const {
 }
 void BinarySearchTree::printTree() const {}
 void BinarySearchTree::remove(DATATYPE) {}
+void BinarySearchTree::adjust(BT *node) {}

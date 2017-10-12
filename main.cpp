@@ -24,7 +24,7 @@ int main() {
     BT * BDS=scanBiaoDaShi(biaodashi);
     BinarySearchTree binarySearchTree;
     cout<<"树是空："<<binarySearchTree.isEmpty()<<endl;
-    string string1="ecdbfg";
+    string string1="ecdbfgh";
     for (char c:string1)
     {
         binarySearchTree.insert(binarySearchTree.root,c);

@@ -19,7 +19,7 @@ typedef struct BTree
 BT * scanBiaoDaShi(string );
 void print_tree(BT * );
 void print_tree_first_format(BT*,int w);
-
+int checkAdjustType(BT*,int);
 class BinarySearchTree{
 public:
     BT * root=NULL;
@@ -28,6 +28,7 @@ public:
     bool isEmpty() const ;
     void insert(BT *,DATATYPE);
     void remove(DATATYPE);
+    void adjust(BT *);
 
 
 };
