@@ -241,3 +241,16 @@ void heap_adjust(int heap[],int i,int n)
         i=big;
     }
 }
+void heap_sort(int a[],int j)
+{
+    while(j>0)
+    {
+
+        a[0]=a[j];
+        a[j]=a[1];
+        a[1]=a[0];
+        j--;
+        heap_adjust(a,1,j);
+
+    }
+}

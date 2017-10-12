@@ -38,16 +38,6 @@ int main() {
     {
         heap_adjust(a,i,sizeof(a)/ sizeof(int)-1);
     }
-    int j=sizeof(a)/ sizeof(int)-1;
-    while(j>0)
-    {
-
-        a[0]=a[j];
-        a[j]=a[1];
-        a[1]=a[0];
-        j--;
-        heap_adjust(a,1,j);
-
-    }
+    heap_sort(a,sizeof(a)/ sizeof(int)-1);
     return 0;
 }

@@ -33,3 +33,4 @@ public:
 
 };
 void heap_adjust(int[],int,int);//堆排序调整函数
+void heap_sort(int [],int);
