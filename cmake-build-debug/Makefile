@@ -123,32 +123,32 @@ Pratice/fast:
 	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/build
 .PHONY : Pratice/fast
 
-biaodashi_tree.o: biaodashi_tree.cpp.o
+common.o: common.cpp.o
 
-.PHONY : biaodashi_tree.o
+.PHONY : common.o
 
 # target to build an object file
-biaodashi_tree.cpp.o:
-	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o
-.PHONY : biaodashi_tree.cpp.o
+common.cpp.o:
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/common.cpp.o
+.PHONY : common.cpp.o
 
-biaodashi_tree.i: biaodashi_tree.cpp.i
+common.i: common.cpp.i
 
-.PHONY : biaodashi_tree.i
+.PHONY : common.i
 
 # target to preprocess a source file
-biaodashi_tree.cpp.i:
-	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.i
-.PHONY : biaodashi_tree.cpp.i
+common.cpp.i:
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/common.cpp.i
+.PHONY : common.cpp.i
 
-biaodashi_tree.s: biaodashi_tree.cpp.s
+common.s: common.cpp.s
 
-.PHONY : biaodashi_tree.s
+.PHONY : common.s
 
 # target to generate assembly for a file
-biaodashi_tree.cpp.s:
-	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.s
-.PHONY : biaodashi_tree.cpp.s
+common.cpp.s:
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/common.cpp.s
+.PHONY : common.cpp.s
 
 main.o: main.cpp.o
 
@@ -240,9 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Pratice"
-	@echo "... biaodashi_tree.o"
-	@echo "... biaodashi_tree.i"
-	@echo "... biaodashi_tree.s"
+	@echo "... common.o"
+	@echo "... common.i"
+	@echo "... common.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

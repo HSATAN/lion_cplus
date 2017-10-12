@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp" "/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o"
+  "/Users/huangkaijie/CLionProjects/Pratice/common.cpp" "/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles/Pratice.dir/common.cpp.o"
   "/Users/huangkaijie/CLionProjects/Pratice/main.cpp" "/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles/Pratice.dir/main.cpp.o"
   "/Users/huangkaijie/CLionProjects/Pratice/thread.cpp" "/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles/Pratice.dir/thread.cpp.o"
   "/Users/huangkaijie/CLionProjects/Pratice/tree.cpp" "/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles/Pratice.dir/tree.cpp.o"

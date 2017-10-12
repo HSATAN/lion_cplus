@@ -82,10 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp">
-			<Option target="Pratice"/>
-		</Unit>
-		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.h">
+		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/common.cpp">
 			<Option target="Pratice"/>
 		</Unit>
 		<Unit filename="/Users/huangkaijie/CLionProjects/Pratice/main.cpp">

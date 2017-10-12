@@ -129,28 +129,28 @@ CMakeFiles/Pratice.dir/tree.cpp.o.provides: CMakeFiles/Pratice.dir/tree.cpp.o.re
 CMakeFiles/Pratice.dir/tree.cpp.o.provides.build: CMakeFiles/Pratice.dir/tree.cpp.o
 
 
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o: CMakeFiles/Pratice.dir/flags.make
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o: ../biaodashi_tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o -c /Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp
+CMakeFiles/Pratice.dir/common.cpp.o: CMakeFiles/Pratice.dir/flags.make
+CMakeFiles/Pratice.dir/common.cpp.o: ../common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pratice.dir/common.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Pratice.dir/common.cpp.o -c /Users/huangkaijie/CLionProjects/Pratice/common.cpp
 
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pratice.dir/biaodashi_tree.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp > CMakeFiles/Pratice.dir/biaodashi_tree.cpp.i
+CMakeFiles/Pratice.dir/common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pratice.dir/common.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/huangkaijie/CLionProjects/Pratice/common.cpp > CMakeFiles/Pratice.dir/common.cpp.i
 
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pratice.dir/biaodashi_tree.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huangkaijie/CLionProjects/Pratice/biaodashi_tree.cpp -o CMakeFiles/Pratice.dir/biaodashi_tree.cpp.s
+CMakeFiles/Pratice.dir/common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pratice.dir/common.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huangkaijie/CLionProjects/Pratice/common.cpp -o CMakeFiles/Pratice.dir/common.cpp.s
 
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.requires:
+CMakeFiles/Pratice.dir/common.cpp.o.requires:
 
-.PHONY : CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.requires
+.PHONY : CMakeFiles/Pratice.dir/common.cpp.o.requires
 
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.provides: CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.provides.build
-.PHONY : CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.provides
+CMakeFiles/Pratice.dir/common.cpp.o.provides: CMakeFiles/Pratice.dir/common.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Pratice.dir/build.make CMakeFiles/Pratice.dir/common.cpp.o.provides.build
+.PHONY : CMakeFiles/Pratice.dir/common.cpp.o.provides
 
-CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.provides.build: CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o
+CMakeFiles/Pratice.dir/common.cpp.o.provides.build: CMakeFiles/Pratice.dir/common.cpp.o
 
 
 # Object files for target Pratice
@@ -158,7 +158,7 @@ Pratice_OBJECTS = \
 "CMakeFiles/Pratice.dir/main.cpp.o" \
 "CMakeFiles/Pratice.dir/thread.cpp.o" \
 "CMakeFiles/Pratice.dir/tree.cpp.o" \
-"CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o"
+"CMakeFiles/Pratice.dir/common.cpp.o"
 
 # External object files for target Pratice
 Pratice_EXTERNAL_OBJECTS =
@@ -166,7 +166,7 @@ Pratice_EXTERNAL_OBJECTS =
 Pratice: CMakeFiles/Pratice.dir/main.cpp.o
 Pratice: CMakeFiles/Pratice.dir/thread.cpp.o
 Pratice: CMakeFiles/Pratice.dir/tree.cpp.o
-Pratice: CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o
+Pratice: CMakeFiles/Pratice.dir/common.cpp.o
 Pratice: CMakeFiles/Pratice.dir/build.make
 Pratice: CMakeFiles/Pratice.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/huangkaijie/CLionProjects/Pratice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Pratice"
@@ -180,7 +180,7 @@ CMakeFiles/Pratice.dir/build: Pratice
 CMakeFiles/Pratice.dir/requires: CMakeFiles/Pratice.dir/main.cpp.o.requires
 CMakeFiles/Pratice.dir/requires: CMakeFiles/Pratice.dir/thread.cpp.o.requires
 CMakeFiles/Pratice.dir/requires: CMakeFiles/Pratice.dir/tree.cpp.o.requires
-CMakeFiles/Pratice.dir/requires: CMakeFiles/Pratice.dir/biaodashi_tree.cpp.o.requires
+CMakeFiles/Pratice.dir/requires: CMakeFiles/Pratice.dir/common.cpp.o.requires
 
 .PHONY : CMakeFiles/Pratice.dir/requires
 

@@ -3,6 +3,9 @@
 //
 
 #pragma once
+#include "tree.h"
+#include <iostream>
+using namespace std;
 typedef char DATATYPE;
 
 typedef struct BTree
@@ -13,3 +16,18 @@ typedef struct BTree
     int balance;
     int depth;
 } BT;
+BT * scanBiaoDaShi(string );
+void print_tree(BT * );
+void print_tree_first_format(BT*,int w);
+
+class BinarySearchTree{
+public:
+    BT * root=NULL;
+    void printTree() const ;
+
+    bool isEmpty() const ;
+    void insert(BT *,DATATYPE);
+    void remove(DATATYPE);
+
+
+};
