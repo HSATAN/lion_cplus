@@ -216,3 +216,28 @@ bool BinarySearchTree::isEmpty() const {
 void BinarySearchTree::printTree() const {}
 void BinarySearchTree::remove(DATATYPE) {}
 void BinarySearchTree::adjust(BT *node) {}
+void heap_adjust(int heap[],int i,int n)
+{
+    //大根堆
+    while (i<n)
+    {
+
+        int big=2*i;
+        if(big<=n)
+        {
+        if(2*i+1 <= n)
+        {
+            if(heap[2*i]<heap[2*i+1])
+            big= 2*i+1;
+        }
+        DATATYPE temp;
+        temp=heap[big];
+        if(heap[i]<heap[big])
+        {
+            heap[big]=heap[i];
+            heap[i]=temp;
+        }
+        }
+        i=big;
+    }
+}

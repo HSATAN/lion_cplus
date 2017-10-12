@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "tree.h"
 #include <iomanip>
+#include "common.h"
 using namespace std;
 
 
@@ -20,16 +21,33 @@ int main() {
 //    auto i="huangkaijie";
 //    cout<<i<<endl;
 //    cout<<typeid(i).name()<<endl;
-    string biaodashi="ab+cde+**";
-    BT * BDS=scanBiaoDaShi(biaodashi);
-    BinarySearchTree binarySearchTree;
-    cout<<"树是空："<<binarySearchTree.isEmpty()<<endl;
-    string string1="ecdbfgh";
-    for (char c:string1)
+//    string biaodashi="ab+cde+**";
+//    BT * BDS=scanBiaoDaShi(biaodashi);
+//    BinarySearchTree binarySearchTree;
+//    cout<<"树是空："<<binarySearchTree.isEmpty()<<endl;
+//    string string1="ecdbfgh";
+//    for (char c:string1)
+//    {
+//        binarySearchTree.insert(binarySearchTree.root,c);
+//    }
+//    print_tree_first_format(binarySearchTree.root,0);
+//    cout<<"树是空："<<binarySearchTree.isEmpty()<<endl;
+//    test_map();
+    int a[]={0,5,4,7,3,9,8,1,2,6};
+    for(int i=(sizeof(a)/ sizeof(int)-1)/2;i>0;i--)
     {
-        binarySearchTree.insert(binarySearchTree.root,c);
+        heap_adjust(a,i,sizeof(a)/ sizeof(int)-1);
     }
-    print_tree_first_format(binarySearchTree.root,0);
-    cout<<"树是空："<<binarySearchTree.isEmpty()<<endl;
+    int j=sizeof(a)/ sizeof(int)-1;
+    while(j>0)
+    {
+
+        a[0]=a[j];
+        a[j]=a[1];
+        a[1]=a[0];
+        j--;
+        heap_adjust(a,1,j);
+
+    }
     return 0;
 }

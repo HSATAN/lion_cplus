@@ -3,7 +3,9 @@
 
 CMakeFiles/Pratice.dir/common.cpp.o
  /Users/huangkaijie/CLionProjects/Pratice/common.cpp
+ /Users/huangkaijie/CLionProjects/Pratice/common.h
 CMakeFiles/Pratice.dir/main.cpp.o
+ /Users/huangkaijie/CLionProjects/Pratice/common.h
  /Users/huangkaijie/CLionProjects/Pratice/main.cpp
  /Users/huangkaijie/CLionProjects/Pratice/tree.h
 CMakeFiles/Pratice.dir/thread.cpp.o
