@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78915236-0894-4cf8-9b5f-16ae339cb0b8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Pratice.dir/tree.cpp.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tree.cpp" afterPath="$PROJECT_DIR$/tree.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tree.h" afterPath="$PROJECT_DIR$/tree.h" />
     </list>
@@ -65,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/tree.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding>
                 <element signature="e#61#78#0" expanded="true" />
               </folding>
@@ -76,8 +74,8 @@
       <file leaf-file-name="tree.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tree.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="185" column="33" lean-forward="false" selection-start-line="185" selection-start-column="30" selection-end-line="185" selection-end-column="33" />
+            <state relative-caret-position="403">
+              <caret line="168" column="20" lean-forward="false" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="20" />
               <folding>
                 <element signature="e#109#128#0" expanded="true" />
                 <element signature="e#223#1131#0" expanded="false" />
@@ -205,12 +203,12 @@
       <updated>1506049828900</updated>
       <workItem from="1506049830671" duration="57444000" />
       <workItem from="1506394887319" duration="11290000" />
-      <workItem from="1507688450348" duration="22347000" />
+      <workItem from="1507688450348" duration="23208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91081000" />
+    <option name="totallyTimeSpent" value="91942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="621" y="34" width="1400" height="1000" extended-state="0" />
@@ -499,16 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tree.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#61#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/iterator">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -535,10 +523,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="e#61#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tree.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="185" column="33" lean-forward="false" selection-start-line="185" selection-start-column="30" selection-end-line="185" selection-end-column="33" />
+        <state relative-caret-position="403">
+          <caret line="168" column="20" lean-forward="false" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="20" />
           <folding>
             <element signature="e#109#128#0" expanded="true" />
             <element signature="e#223#1131#0" expanded="false" />

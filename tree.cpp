@@ -159,8 +159,19 @@ void BinarySearchTree::insert(BT *root,DATATYPE key) {
     if(abs(root->balance)==2)
     {
         cout<<"----"<<root->key<<"-----"<<endl;
-        cout<<checkAdjustType(root,1)<<endl;
-        cout<<checkAdjustType(root,2)<<endl;
+        int type = checkAdjustType(root);
+        cout<<type<<endl;
+        if (type==1)
+        {
+            cout<<"type ll"<<endl;
+
+        }
+        else if(type==2)
+        {
+            cout<<"type rr"<<endl;
+
+        }
+
     }
 }
 
@@ -183,9 +194,19 @@ int get_depth_lr(BT *tree, int i)
 
 }
 
-int checkAdjustType(BT *tree, int i)
+int checkAdjustType(BT *tree)
 {
-    return get_depth_lr(tree,i);
+    int type1=get_depth_lr(tree,1);
+    if (type1==3)
+    {
+        return 1;
+    }
+    int type2=get_depth_lr(tree,2);
+    if (type2==3)
+    {
+        return 2;
+    }
+    return 0;
 }
 bool BinarySearchTree::isEmpty() const {
     if(this->root==NULL)
