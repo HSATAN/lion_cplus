@@ -34,10 +34,18 @@ int main() {
 //    cout<<"树是空："<<binarySearchTree.isEmpty()<<endl;
 //    test_map();
     int a[]={0,5,4,7,3,9,8,1,2,6};
-    for(int i=(sizeof(a)/ sizeof(int)-1)/2;i>0;i--)
+//    for(int i=(sizeof(a)/ sizeof(int)-1)/2;i>0;i--)
+//    {
+//        heap_adjust(a,i,sizeof(a)/ sizeof(int)-1);
+//    }
+//    heap_sort(a,sizeof(a)/ sizeof(int)-1);
+//
+    int *p=new int[10];
+    mergesort(a,0,9,p);
+    for (int i=0;i<10;i++)
     {
-        heap_adjust(a,i,sizeof(a)/ sizeof(int)-1);
+        cout<<a[i]<<endl;
     }
-    heap_sort(a,sizeof(a)/ sizeof(int)-1);
+
     return 0;
 }
